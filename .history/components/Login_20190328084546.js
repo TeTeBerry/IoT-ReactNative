@@ -34,7 +34,7 @@ export default class Login extends Component {
               <TouchableOpacity
                   disabled={!canSubmit}
                   style={[styles.submitBtn, canSubmit ? null : styles.disabledBtn]}>
-                  <Text style={styles.sbmtBtnText}>Login</Text>
+                  <Text>Login</Text>
               </TouchableOpacity>
             </Content>
           </Container>

@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Form, 
          Item, Input, Label,Left,Body,Right,
-         Title} from 'native-base';
-import { View,Text,TouchableOpacity} from 'react-native';
-import { styles } from './style/style';
+         Title,Button,Text,Icon} from 'native-base';
+import { View } from 'react-native';
 
 export default class Login extends Component {
 
     render() {
-        let canSubmit = false;
-
         return (
             <Container>
             <Header>
@@ -20,9 +17,12 @@ export default class Login extends Component {
           <Right />
         </Header>
             <Content>
+            <Icon name='home' />
+          <Icon ios='ios-menu' android="md-menu" style={{fontSize: 20, color: 'red'}}/>
+          <Icon type="FontAwesome" name="home" />
               <Form>
                 <Item floatingLabel>
-                  <Label>Member Name</Label>
+                  <Label>Username</Label>
                   <Input />
                 </Item>
                 <Item floatingLabel last>
@@ -31,11 +31,9 @@ export default class Login extends Component {
                 </Item>
               </Form>
               <View style={{margin:20}} />
-              <TouchableOpacity
-                  disabled={!canSubmit}
-                  style={[styles.submitBtn, canSubmit ? null : styles.disabledBtn]}>
-                  <Text style={styles.sbmtBtnText}>Login</Text>
-              </TouchableOpacity>
+              <Button block>
+            <Text>Login</Text>
+          </Button>
             </Content>
           </Container>
             )

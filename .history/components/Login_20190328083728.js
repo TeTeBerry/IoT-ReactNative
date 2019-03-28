@@ -8,8 +8,6 @@ import { styles } from './style/style';
 export default class Login extends Component {
 
     render() {
-        let canSubmit = false;
-
         return (
             <Container>
             <Header>
@@ -31,10 +29,8 @@ export default class Login extends Component {
                 </Item>
               </Form>
               <View style={{margin:20}} />
-              <TouchableOpacity
-                  disabled={!canSubmit}
-                  style={[styles.submitBtn, canSubmit ? null : styles.disabledBtn]}>
-                  <Text style={styles.sbmtBtnText}>Login</Text>
+              <TouchableOpacity>
+                  <Text>Login</Text>
               </TouchableOpacity>
             </Content>
           </Container>
